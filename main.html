@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grocery List</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<link href='https://fonts.googleapis.com/css?family=Abel|Yanone+Kaffeesatz:400,700|Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+	<script type="text/javascript"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div id="title">JQuery Grocery List</div>		
+	</div>
+
+	<div class="seperator" id="horizontal"></div>
+
+
+	<div class="container">
+
+
+		<div class="sections" id="left">
+			<h2 class="section-title">Grocery Items</h2>
+			<form>
+				<input type="text" name="groceryitem" id="groceryiteminput" value="Enter Grocery Item" autofocus>
+				<div class="clearfix"></div>
+				<p class="inputtitle" id="catagorytitle">Select<br>Catagory</p>
+				<select name="Catagory" id="dropdownlist">
+					<option value="Essentials">Essentials</option>
+					<option value="Dairy">Dairy</option>
+					<option value="Cereals/Bread">Cereals/Bread</option>
+					<option value="Vegetables">Vegetables</option>
+					<option value="Meats">Meats</option>
+					<option value="Other">Other</option>
+				</select><br>
+				<p class="inputtitle" id="quantityinput">Quantity</p>
+				<input type="text" name="quantity" id="numberpicker"/><br>
+				<input type="submit" value="Add to List" class="button" id="submitbutton">
+			</form>
+		</div>
+
+
+		<div class="seperator" id="vertical">&nbsp;</div>
+
+
+
+
+
+		<div class="sections" id="middle">
+			<h2 class="section-title">Grocery List</h2>
+			<div id="grocerylist">
+
+
+				<div class="catagory">
+					<p>Essentials</p>
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">1</div>			
+					<p class="groceryitem">Bread</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">12</div>
+					<p class="groceryitem">Eggs</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">1 gl</div>
+					<p class="groceryitem">Milk</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+
+
+				<div class="catagory">
+					<p>Meats</p>
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">1lb</div>
+					<p class="groceryitem">Bologna</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">1lb</div>
+					<p class="groceryitem">Black Forest Ham</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">2lb</div>
+					<p class="groceryitem">Chicken Breast</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+				<div class="listitem">
+					<div class="itemquantity">3</div>
+					<p class="groceryitem">Steaks</p>
+					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+		<div class="seperator" id="vertical">&nbsp;</div>
+
+
+		<div class="sections" id="right">
+			<h2 class="section-title">List Views</h2>
+			<ul class="viewlist">
+				<li><a href="#">Normal View</a></li>
+				<li><a href="#">Alphabetical <i class="fa fa-sort-alpha-asc"></i></a></li>
+				<li><a href="#">Alphabetical <i class="fa fa-sort-alpha-desc"></i></a></li>
+				<li><a href="#">Print View</a></li>
+				<li><a href="#">Checked Items Only</a></li>
+			</ul>
+
+			<div class="seperator" id="listviewseperator">
+			</div>	
+			<div id="buttongroup">
+				<input type="submit" value="Save List" class="button" id="submitbutton">
+				<input type="submit" value="Print List" class="button" id="submitbutton">
+				<input type="submit" value="Clear List" class="button" id="submitbutton">
+			</div>
+		
+
+
+
+
+		</div>
+
+	</div>
+	
+</body>
+</html>
