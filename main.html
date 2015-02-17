@@ -29,22 +29,22 @@
 
 		<div class="sections" id="left">
 			<h2 class="section-title">Grocery Items</h2>
-			<form>
-				<input type="text" name="groceryitem" id="groceryiteminput" value="Enter Grocery Item" autofocus>
+			<div>
+				<input type="text" name="groceryitem" id="groceryiteminput" value="Enter Grocery Item">
 				<div class="clearfix"></div>
 				<p class="inputtitle" id="catagorytitle">Select<br>Catagory</p>
 				<select name="Catagory" id="dropdownlist">
 					<option value="Essentials">Essentials</option>
 					<option value="Dairy">Dairy</option>
-					<option value="Cereals/Bread">Cereals/Bread</option>
+					<option value="Cereals-Breads">Cereals-Breads</option>
 					<option value="Vegetables">Vegetables</option>
 					<option value="Meats">Meats</option>
 					<option value="Other">Other</option>
 				</select><br>
 				<p class="inputtitle" id="quantityinput">Quantity</p>
-				<input type="text" name="quantity" id="numberpicker"/><br>
+				<input type="text" name="quantity" id="numberpicker" maxlength="3"/><br>
 				<input type="submit" value="Add to List" class="button" id="submitbutton">
-			</form>
+			</div>
 		</div>
 
 
@@ -56,54 +56,56 @@
 
 		<div class="sections" id="middle">
 			<h2 class="section-title">Grocery List</h2>
-			<div id="grocerylist">
+			<ul id="grocerylist">
 
 
-				<div class="catagory">
+				 <ul class="catagory" id="Essentials">
 					<p>Essentials</p>
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">1</div>			
-					<p class="groceryitem">Bread</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">12</div>
-					<p class="groceryitem">Eggs</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">1 gl</div>
-					<p class="groceryitem">Milk</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
+				
+					<li class="listitem">
+						<div class="itemquantity">1</div>			
+						<p class="groceryitem">Bread</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>		
+					</li>
+					<li class="listitem">
+						<div class="itemquantity">12</div>
+						<p class="groceryitem">Eggs</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>	
+					</li>
+					<li class="listitem">
+						<div class="itemquantity">1 gl</div>
+						<p class="groceryitem">Milk</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>	
+					</li>
+				</ul>
 
 
-				<div class="catagory">
+				<!--<ul class="catagory">
 					<p>Meats</p>
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">1lb</div>
-					<p class="groceryitem">Bologna</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">1lb</div>
-					<p class="groceryitem">Black Forest Ham</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">2lb</div>
-					<p class="groceryitem">Chicken Breast</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
-				<div class="listitem">
-					<div class="itemquantity">3</div>
-					<p class="groceryitem">Steaks</p>
-					<a href="#"><i class="fa fa-trash-o"></i></a><a href="#"><i class="fa fa-check"></i></a>		
-				</div>
+				
+					<li class="listitem">
+						<div class="itemquantity">1lb</div>
+						<p class="groceryitem">Bologna</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>	
+					</li>
+					<li class="listitem">
+						<div class="itemquantity">1lb</div>
+						<p class="groceryitem">Black Forest Ham</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>	
+					</li>
+					<li class="listitem">
+						<div class="itemquantity">2lb</div>
+						<p class="groceryitem">Chicken Breast</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>	
+					</li>
+					<li class="listitem">
+						<div class="itemquantity">3</div>
+						<p class="groceryitem">Steaks</p>
+						<i class="fa fa-trash-o"></i><i class="fa fa-check"></i>
+					</li>		
+				</ul> -->
 
-			</div>
+			</ul>
 
 		</div>
 
@@ -117,7 +119,7 @@
 		<div class="sections" id="right">
 			<h2 class="section-title">List Views</h2>
 			<ul class="viewlist">
-				<li><a href="#">Normal View</a></li>
+				<li class="activeview"><a href="#">Normal View</a></li>
 				<li><a href="#">Alphabetical <i class="fa fa-sort-alpha-asc"></i></a></li>
 				<li><a href="#">Alphabetical <i class="fa fa-sort-alpha-desc"></i></a></li>
 				<li><a href="#">Print View</a></li>
@@ -128,13 +130,9 @@
 			</div>	
 			<div id="buttongroup">
 				<input type="submit" value="Save List" class="button" id="submitbutton">
-				<input type="submit" value="Print List" class="button" id="submitbutton">
+				<input type="submit" value="Print List" class="button" id="submitbutton"><br>
 				<input type="submit" value="Clear List" class="button" id="submitbutton">
 			</div>
-		
-
-
-
 
 		</div>
 

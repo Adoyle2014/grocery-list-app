@@ -10,6 +10,22 @@ a, ul, li {
 
 }
 
+a, ul, li:hover {
+	outline: none;
+}
+
+a, ul, li:focus {
+	outline: none;
+}
+
+h1, h2, h3, h4, h5, h6:hover {
+	cursor: default;
+}
+
+.fa {
+	cursor: pointer;
+}
+
 .clearfix {
 	clear: both;
 }
@@ -20,6 +36,7 @@ a, ul, li {
 	color: #4f545a;
 	text-align: center;
 	padding: 20px;
+	cursor: default;
 	
 }
 
@@ -108,6 +125,10 @@ form {
 	margin-bottom: 5px;
 }
 
+.inputtitle:hover {
+	cursor: default;
+}
+
 #catagorytitle {
 	
 
@@ -115,6 +136,7 @@ form {
 
 #dropdownlist {
 	margin-bottom: 25px;
+	cursor: pointer;
 }
 
 #numberpicker {
@@ -161,6 +183,7 @@ form {
 .listitem:hover {
 	border: 1px solid #878f9a;
 	background-color: #a9b2c0;
+	cursor: default;
 
 }
 
@@ -228,6 +251,15 @@ form {
 
 }
 
+.activeview {
+	text-decoration: underline;
+	
+}
+
+.activeview > a {
+	color: #cad5e7 !important;
+}
+
 #buttongroup {
 	text-align: center;
 	margin-top: 30px;
@@ -235,4 +267,44 @@ form {
 	margin-left: 10px;
 
 }
+
+#buttongroup > input {
+	margin: 20px 10px 0 10px;
+
+}
+
+#submitbutton {
+	border-radius: 5px;
+	background-color: #4f545a;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	color: #cad5e7;
+	font-size: 1.2em;
+	box-shadow: 0px 0px 4px #cad5e7;
+
+}
+
+#submitbutton:hover {
+	color: #a9b2c0;
+	cursor: pointer;
+	
+}
 /* font-family: 'Indie Flower', cursive; */
+
+
+
+/*------------------------- Media Queries ----------------------*/
+
+@media(max-width: 1350px) {
+	.groceryitem {
+	width: 60%;
+	}
+
+}
+
+@media(max-width: 1275px) {
+	#listviewseperator {
+	width: 60%;
+	}
+
+}
