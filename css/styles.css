@@ -201,7 +201,12 @@ form {
 	margin-left: 10px;
 	line-height: 1em;
 	margin-top: 3px;
+	text-decoration: line-through
 
+}
+
+.unchecked {
+	 text-decoration: none !important;
 }
 
 

@@ -7,13 +7,8 @@ $(document).ready(function() {
 		var newGroceryItem = $("#groceryiteminput").val();
 		var newGroceryItemCat = $("#dropdownlist").val();
 		var newGroceryItemQty = $("#numberpicker").val();
-		var newListItem = '<li class="listitem"><div class="itemquantity">' + newGroceryItemQty + '</div><p class="groceryitem">' + newGroceryItem + '</p><i class="fa fa-trash-o"></i><i class="fa fa-check"></i></li>'
+		var newListItem = '<li class="listitem"><div class="itemquantity">' + newGroceryItemQty + '</div><p class="groceryitem unchecked">' + newGroceryItem + '</p><i class="fa fa-trash-o"></i></li>'
 		var newCatagory = '<ul class="catagory" id="' + newGroceryItemCat + '"><p>' + newGroceryItemCat + '</p>'
-		
-
-
-		console.log(newGroceryItem + " - " + newGroceryItemCat + " - " + newGroceryItemQty + " - " + newCatagory + " - ")
-
 		
 
 		if($("ul#grocerylist").children("#" + newGroceryItemCat).length != 0)
@@ -24,11 +19,11 @@ $(document).ready(function() {
 	            		case 'Dairy':
 			    	$("#Dairy").append(newListItem);
 	            	break;
-	            		case 'Cereals/Breads':
-			    	$("#Cereals/Breads").append(newListItem);
+	            		case 'Breads':
+			    	$("#Breads").append(newListItem);
 	            	break;
-	            		case 'Vegetables':
-			    	$("#Vegetables").append(newListItem);
+	            		case 'Produce':
+			    	$("#Produce").append(newListItem);
 	            	break;
 	            	case 'Meats':
 			    	$("#Meats").append(newListItem);
@@ -36,15 +31,19 @@ $(document).ready(function() {
 	            		case 'Other':
 			    	$("#Other").append(newListItem);
 	            	break;
-        }
-        else {
+	        }
+	        else {
 
-        	$("ul#grocerylist").append(newCatagory);
-        	$( "#" +  newGroceryItemCat).append(newListItem);
-
-        	
-        };
+	        	$("ul#grocerylist").append(newCatagory);
+	        	$( "#" +  newGroceryItemCat).append(newListItem);        	
+	        };
 		
 	});
+
+	$('#grocerylist').on('click', '.groceryitem', function() {
+		$(this).toggleClass('unchecked'); 
+});
+	
+	
 	
 });
